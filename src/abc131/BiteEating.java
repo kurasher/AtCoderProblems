@@ -10,26 +10,19 @@ public class BiteEating {
 		int N = Integer.parseInt(sc.next());
 		int L = Integer.parseInt(sc.next());
 
-		int sumN = 0;
-		int sumN_1 = 0;
-		boolean flag = false;
-		int min = 100000;
-//		(N + L -1) < 0ならすべて負の値
-//		L > 0 ならすべて正の値
-		if((N+L-1) < 0) {
-//			-5, -4, -3 , -2
+		int ans = 0;
+//		(N + L -1) < 0ならすべて負の値→最大の値
+//		L > 0 ならすべて正の値→最小の値
+		if((N+L-1) < 0) {//all number minus
 //			数列的に考えたい → O(1)のはず
+			ans = (L + (N  + L - 1)) * N / 2 - (N  + L - 1);
+		}else if(L > 0) {//all number plus
+			ans = (L + (N + L - 1)) * N / 2 - L;
+		}else {
+			ans = (L + (N + L - 1)) * N / 2;
 		}
-		for(int i = 1; i < N+1; i++) {
 
-			sumN = sumN + (L + i - 1);
-			if(min > Math.abs(L+i-1)) {
-				min = Math.abs(L+i-1);
-			}
-		}
-//		0がはいるときは、0を省く
-//		すべて正の値 > 最小値をsumNから引く
-//		すべて負の値 > 最大値をsumNから引く
+		System.out.println(ans);
 	}
 
 }
