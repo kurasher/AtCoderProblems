@@ -11,23 +11,45 @@ public class GoodDistance {
 		String[] lines = line.split(" ");
 		int N = Integer.parseInt(lines[0]);
 		int D = Integer.parseInt(lines[1]);
-		int[][] X = new int[D][N];
+		int[][] X = new int[N][D];
+		int count = 0;
 
 		for (int i = 0; i < N; i++) {
 			line = sc.nextLine();
 			lines = line.split(" ");
-			for (int j = 0; j < lines.length; j++) {
-				X[j][i] = Integer.parseInt(lines[j]);
+			for (int j = 0; j < D; j++) {
+				X[i][j] = Integer.parseInt(lines[j]);
 			}
 		}
 
+
 		for (int n = 0; n < N; n++) {
-			for (int i = 0; i < D - 1; i++) {
-				for (int j = i + 1; j < D; j++) {
-					Math.abs(X[i][n] - X[j][n]) * Math.abs(X[i][n] - X[j][n]);
+			for(int n2 = n+1; n2 < N; n2++) {
+				double sum = 0;
+				for (int i = 0; i < D; i++) {
+					int diff = Math.abs(X[n][i] - X[n2][i]);
+					sum += diff * diff;
+				}
+
+				if(isSquareNumber(sum)) {
+					count++;
 				}
 			}
 		}
+
+		System.out.println(count);
 	}
+
+    static // 平方数かどうかを調べる。
+    boolean isSquareNumber (double number) {
+        double sqrtOfNumber = Math.sqrt(number);
+//    	System.out.println(sqrtOfNumber);
+        return (isInteger(sqrtOfNumber));
+    }
+
+    static // 整数かどうかを調べる。
+    boolean isInteger (double number) {
+        return (number == Math.floor(number));
+    }
 
 }
