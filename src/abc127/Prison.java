@@ -21,6 +21,22 @@ public class Prison {
 			R[i] = Integer.parseInt(lines[1]);
 		}
 
+		int Left = L[0];
+		int Right = R[0];
+		for(int i = 0; i < M; i++) {
+			if(Left < L[i]) {
+				Left = L[i];
+			}
+			if(Right > R[i]) {
+				Right = R[i];
+			}
+		}
+
+		if(Right- Left < 0) {
+			System.out.println(0);
+		}else {
+			System.out.println(Right - Left + 1);
+		}
 
 	}
 
