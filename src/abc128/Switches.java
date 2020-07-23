@@ -11,34 +11,46 @@ public class Switches {
 		String[] lines = line.split(" ");
 		int N = Integer.parseInt(lines[0]);
 		int M = Integer.parseInt(lines[1]);
-		int[][] s = new int[M][];
-		int[] p = new int[M];
+		int[][] ks = new int[M][N];
 
-		for (int i = 0; i <= M; i++) {
-			line = sc.nextLine();
-			lines = line.split(" ");
-			if (i == M) {
-				for (int j = 0; j < lines.length; j++) {
-					p[j] = Integer.parseInt(lines[j]);
-				}
-			} else {
-				s[i] = new int[Integer.parseInt(lines[0])];
-				for (int j = 1; j < lines.length; j++) {
-					s[i][j - 1] = Integer.parseInt(lines[j]);
-				}
+
+		for (int i = 0; i < M; i++) {
+			int k = sc.nextInt();
+			for(int j = 0;  j < k; j++) {
+				ks[i][sc.nextInt() - 1] = 1;
 			}
 		}
 
-//		for(int i = 0 ; i < p.length; i++) {
-//			System.out.println(p[i]);
-//		}
-//		for(int i = 0; i < M; i++) {
-//			for(int j = 0; j < s[i].length; j++) {
-//				System.out.print(s[i][j] + " ");
-//			}
-//			System.out.println();
-//		}
+		int[] p = new int[M];
+		for(int i = 0 ; i < p.length; i++) {
+			p[i] = sc.nextInt();
+		}
 
+		int sum = 0;
+		//Shift演算を使っているらしい
+		for(int i = 0; i < (1 << N); i++) {
+			boolean exist = true;
+			for(int j2 = 0; j2 < ks.length; j2++) {
+				int count = 0;
+				for(int k = 0; k < ks[j2].length; k++) {
+					if(ks[j2][k] == 1) {
+						if((1 & i >> k) == 1) {
+							count++;
+						}
+					}
+				}
+				if(count % 2 != p[j2] ) {
+					exist = false;
+					break;
+				}
+			}
+			if(exist) {
+				sum++;
+			}
+
+		}
+
+		System.out.println(sum);
 	}
 
 }
