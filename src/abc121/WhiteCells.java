@@ -13,18 +13,17 @@ public class WhiteCells {
 		h = sc.nextInt();
 		w = sc.nextInt();
 
-		int ans = H * W;
 		while (h > 0) {
 			h--;
-			ans = ans - H;
-			W--;
+			H--;
 		}
 
 		while (w > 0) {
 			w--;
-			ans = ans - W;
+			W--;
 		}
 
+		int ans = H*W;
 		if (ans < 0) {
 			System.out.println(0);
 		} else {
