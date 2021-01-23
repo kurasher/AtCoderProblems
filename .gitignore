@@ -1,249 +1,379 @@
-Last login: Mon Jan 11 15:33:04 on ttys000
-kurashigeyuuya@kurashigenoMacBook-Pro ~ % ls
-Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		kubectl		workspace
-kurashigeyuuya@kurashigenoMacBook-Pro ~ % cd workspace
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd Java
-" 見た目系
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro Java % cd SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro SpringBoot[develop] % ls
-SpringBeginnerEasy		SpringSample			UdemySpringScratch		handling-form-submission
-kurashigeyuuya@kurashigenoMacBook-Pro SpringBoot[develop] % git log --oneline
-1c3ef89 (HEAD -> develop) Merge remote-tracking branch 'origin/develop' into develop
-9dd68a2 (origin/develop) [add] learning chapter 4
-a1f382c [add] Survey Form
-b56aa0f [add] second edition
-aecb1d5 [add] いろいろ
-5e7f0bb [add] seconde commit
-a4f4f99 [add] Udemy Java講座
-10b32ff (main) Merge pull request #2 from kurasher/develop
-04ac5d9 [add] some files
-d2a8147 [add] first commit & make GreetingController.java
-a5a03b7 [add] settings.gradle etc
-7ca8395 Merge pull request #1 from kurasher/develop
-ba46a34 [add] database migrate by flyway
-eec392d [mod] github oauth2
-68ab7e6 [add] <U+0083><U+008D><U+0083>O<U+0083>C<U+0083><U+0093><U+008C>ã<U+0082>̑<U+0091>J<U+0088>ڐæURL<U+0082>̒ǉÁ
-763dd72 [mod] application.properties
-c52e2c1 [add] バリデーションの追加
-9b346c7 [add] RecipeValidator.java
-8438363 [add] ServiceException.java and ServiceMessage.java
-46d4c61 [add] error handle controller class
-ccc448c [add] new files
-505ae1c [add] build.gradleに依存関係を追加
-92fb1a0 [add] RecipeListViewService.java
-5d7cb76 [add] RecipeService.javaの追加
-14e41d8 [add] RecipeResource.javaの追加
-9e4755a [add] RecipeListViewResource.javaの追加
-ece21d1 [mod] Recipe.javaにgetterとsetterを追加
-ef819f7 [add] service class
-12433a1 [add]controller class
-15141cb [add] kajitoolApplication.java
-2276540 [mod] 修正
-3ff981b [add] domain
-f77d86a [add] SpringSample
-kurashigeyuuya@kurashigenoMacBook-Pro SpringBoot[develop] % ls
-SpringBeginnerEasy		SpringSample			UdemySpringScratch		handling-form-submission
-kurashigeyuuya@kurashigenoMacBook-Pro SpringBoot[develop] % cd ..
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro Java % cd ..
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd JA
-cd: no such file or directory: JA
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % vim ~/.vimrc
-kurashigeyuuya@kurashigenoMacBook-Pro workspace %
-kurashigeyuuya@kurashigenoMacBook-Pro workspace %
-  1 export PATH="/opt/homebrew/bin:$PATH"
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % vim ~/.vimrc
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % mkdir Python
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % brew install bash-completion
-Updating Homebrew...
-^C==> Downloading https://homebrew.bintray.com/bottles/bash-completion-1.3_3.arm64_big_sur.bottle.tar.gz
-#################################                                         46.5%^C
-kurashigeyuuya@kurashigenoMacBook-Pro workspace %
-kurashigeyuuya@kurashigenoMacBook-Pro workspace %
-kurashigeyuuya@kurashigenoMacBook-Pro workspace %
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % brew install zsh-completions
-Updating Homebrew...
-==> Auto-updated Homebrew!
-Updated 2 taps (homebrew/core and homebrew/cask).
-==> New Formulae
-forge                                    gallery-dl                               indicators                               lp_solve                                 tctl
-==> Updated Formulae
-Updated 145 formulae.
-==> New Casks
-accordance                                                                                             raycast
-==> Updated Casks
-Updated 334 casks.
-==> Deleted Casks
-jeromelebel-mongohub
 
-==> Downloading https://github.com/zsh-users/zsh-completions/archive/0.32.0.tar.gz
-==> Downloading from https://codeload.github.com/zsh-users/zsh-completions/tar.gz/0.32.0
-######################################################################## 100.0%
-==> Caveats
-To activate these completions, add the following to your .zshrc:
+# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
 
-  if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-    autoload -Uz compinit
-    compinit
-  fi
+# External tool builders
+.externalToolBuilders/
 
-You may also need to force rebuild `zcompdump`:
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-  rm -f ~/.zcompdump; compinit
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
-Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
-to load these completions, you may need to run this:
+# CDT-specific (C/C++ Development Tooling)
+.cproject
 
-  chmod -R go-w '/opt/homebrew/share/zsh'
-==> Summary
-🍺  /opt/homebrew/Cellar/zsh-completions/0.32.0: 142 files, 1.1MB, built in 1 second
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % vim ~/.zshrc
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % source ~/.zshrc
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					Python					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd Python
-kurashigeyuuya@kurashigenoMacBook-Pro Python % ls
-kurashigeyuuya@kurashigenoMacBook-Pro Python % ls
-kurashigeyuuya@kurashigenoMacBook-Pro Python % cd J
-cd: no such file or directory: J
-kurashigeyuuya@kurashigenoMacBook-Pro Python % cdcd ..
-zsh: correct 'cdcd' to '_cdcd' [nyae]? n
-zsh: command not found: cdcd
-kurashigeyuuya@kurashigenoMacBook-Pro Python % cd ..
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					Python					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd Java
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro Java % git clone https://github.com/kurasher/AtCoderProblems.git
-Cloning into 'AtCoderProblems'...
-remote: Enumerating objects: 259, done.
-remote: Counting objects: 100% (259/259), done.
-remote: Compressing objects: 100% (127/127), done.
-remote: Total 259 (delta 117), reused 257 (delta 117), pack-reused 0
-Receiving objects: 100% (259/259), 48.36 KiB | 281.00 KiB/s, done.
-Resolving deltas: 100% (117/117), done.
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-AtCoderProblems	SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro Java % python --version
-Python 3.9.1
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-AtCoderProblems	SpringBoot
-kurashigeyuuya@kurashigenoMacBook-Pro Java % cd ..
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					Python					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd Python
-kurashigeyuuya@kurashigenoMacBook-Pro Python % ls
-kurashigeyuuya@kurashigenoMacBook-Pro Python % git clone https://github.com/kurasher/DeepLearningFromScratch.git
-Cloning into 'DeepLearningFromScratch'...
-Username for 'https://github.com': kurasher
-Password for 'https://kurasher@github.com':
-remote: Enumerating objects: 94, done.
-remote: Counting objects: 100% (94/94), done.
-remote: Compressing objects: 100% (74/74), done.
-remote: Total 94 (delta 16), reused 93 (delta 16), pack-reused 0
-Receiving objects: 100% (94/94), 26.46 MiB | 308.00 KiB/s, done.
-Resolving deltas: 100% (16/16), done.
-kurashigeyuuya@kurashigenoMacBook-Pro Python % ls
-DeepLearningFromScratch
-kurashigeyuuya@kurashigenoMacBook-Pro Python % cd DeepLearningFromScratch
-kurashigeyuuya@kurashigenoMacBook-Pro DeepLearningFromScratch[master] % ls
-ch01		ch03		ch05		ch07		common		practice
-ch02		ch04		ch06		ch08		dataset
-kurashigeyuuya@kurashigenoMacBook-Pro DeepLearningFromScratch[master] % python
-Python 3.9.1 (default, Jan  5 2021, 21:58:48)
-[Clang 12.0.0 (clang-1200.0.32.28)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> ls
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'ls' is not defined
->>> exit()
-kurashigeyuuya@kurashigenoMacBook-Pro DeepLearningFromScratch[master] % l
-zsh: command not found: l
-kurashigeyuuya@kurashigenoMacBook-Pro DeepLearningFromScratch[master] % ls
-ch01		ch03		ch05		ch07		common		practice
-ch02		ch04		ch06		ch08		dataset
-kurashigeyuuya@kurashigenoMacBook-Pro DeepLearningFromScratch[master] % cd ch01
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % ls
-hungry.py		man.py			sin_cos_graph.py
-img_show.py		simple_graph.py		sin_graph.py
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % python hungry.py
-I'm hungry!
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % ls
-hungry.py		man.py			sin_cos_graph.py
-img_show.py		simple_graph.py		sin_graph.py
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % ls
-hungry.py		img_show.py		man.py			simple_graph.py		sin_cos_graph.py	sin_graph.py
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % ls
-hungry.py		img_show.py		man.py			simple_graph.py		sin_cos_graph.py	sin_graph.py
-kurashigeyuuya@kurashigenoMacBook-Pro ch01[master] % cd
-kurashigeyuuya@kurashigenoMacBook-Pro ~ % ls
-Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		kubectl		workspace
-kurashigeyuuya@kurashigenoMacBook-Pro ~ % cd workspace
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % ls
-Java					Python					kubernetes-kanzen-nyumon-material
-kurashigeyuuya@kurashigenoMacBook-Pro workspace % cd Java
-kurashigeyuuya@kurashigenoMacBook-Pro Java % ls
-172
-173 # Log file
-174 *.log
-175
-176 # BlueJ files
-177 *.ctxt
-178
-179 # Mobile Tools for Java (J2ME)
-180 .mtj.tmp/
-181
-182 # Package Files #
-183 *.jar
-184 *.war
-185 *.nar
-186 *.ear
-187 *.zip
-188 *.tar.gz
-189 *.rar
-190
-191 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-192 hs_err_pid*
-193
-194 ### Windows ###
-195 # Windows thumbnail cache files
-196 Thumbs.db
-197 Thumbs.db:encryptable
-198 ehthumbs.db
-199 ehthumbs_vista.db
-200
-201 # Dump file
-202 *.stackdump
-203
-204 # Folder config file
-205 [Dd]esktop.ini
-206
-207 # Recycle Bin used on file shares
-208 $RECYCLE.BIN/
-209
-210 # Windows Installer files
-211 *.cab
-212 *.msi
-213 *.msix
-214 *.msm
-215 *.msp
-216
-217 # Windows shortcuts
-218 *.lnk
-219
-220 # End of https://www.toptal.com/developers/gitignore/api/java,windows,intellij,eclipse
-.gitignore
--- INSERT --
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+### Eclipse Patch ###
+# Spring Boot Tooling
+.sts4-cache/
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+
+# Sonarlint plugin
+# https://plugins.jetbrains.com/plugin/7973-sonarlint
+.idea/**/sonarlint/
+
+# SonarQube Plugin
+# https://plugins.jetbrains.com/plugin/7238-sonarqube-community-plugin
+.idea/**/sonarIssues.xml
+
+# Markdown Navigator plugin
+# https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
+.idea/**/markdown-navigator/
+
+# Cache file creation bug
+# See https://youtrack.jetbrains.com/issue/JBR-2257
+.idea/$CACHE_FILE$
+
+# CodeStream plugin
+# https://plugins.jetbrains.com/plugin/12206-codestream
+.idea/codestream.xml
+
+### Intellij+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### Intellij+all Patch ###
+# Ignores the whole .idea folder and all .iml files
+# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
+
+.idea/
+
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
+
+### Intellij+iml ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+
+# Generated files
+
+# Sensitive or high-churn files
+
+# Gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+
+# Mongo Explorer plugin
+
+# File-based project format
+
+# IntelliJ
+
+# mpeltonen/sbt-idea plugin
+
+# JIRA plugin
+
+# Cursive Clojure plugin
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+
+# Editor-based Rest Client
+
+# Android studio 3.1+ serialized cache file
+
+### Intellij+iml Patch ###
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
