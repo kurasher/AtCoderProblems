@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
+# Created by https://www.toptal.com/developers/gitignore/api/windows,git,eclipse,intellij,intellij+all,intellij+iml,macos,java
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,git,eclipse,intellij,intellij+all,intellij+iml,macos,java
 
 ### Eclipse ###
 .metadata
@@ -376,4 +376,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows,intellij,intellij+iml,intellij+all,eclipse,java,git
+# End of https://www.toptal.com/developers/gitignore/api/windows,git,eclipse,intellij,intellij+all,intellij+iml,macos,java
